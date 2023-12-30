@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        header img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #5f6368;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input {
+            height: 45px;
+            width: 400px;
+            margin: 10px auto;
+            border-radius: 8px;
+            border: 1px solid #dadce0;
+            padding: 0 15px;
+            box-sizing: border-box;
+            display: block;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #5f6368;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #0c0064;
+            text-decoration: none;
+            text-align: left;
+            margin-left: 15px;
+            position: fixed;
+        }
+
+        button {
+            margin-top: 50px;
+            height: 40px;
+            width: 65px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2825d7;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 270px;
+        }
+
+        button:hover {
+            background-color: #3a79cb;
+        }
+
+        .error {
+            display: none;
+            color: red;
+            font-size: 17px;
+            margin-top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <img src="https://webstockreview.net/images/new-google-logo-png-1.png" alt="logo">
+            <h1>Sign In</h1>
+            <p>with your Google Account</p>
+        </header>
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <p class="error">Incorrect Username or Password. Please try again.</p>
+            <a href="https://accounts.google.com/signin/v2/usernamerecovery?theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Forgot Email or Password?</a>
+        </form>
+        <button onclick="next()">Next</button>
+    </main>
+    <script>
+        function next() {
+            const error = document.querySelector(".error");
+            error.style.display = "block";
+        }
+    </script>
+</body>
+</html>
