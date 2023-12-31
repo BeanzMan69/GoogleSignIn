@@ -67,6 +67,7 @@
             text-align: left;
             margin-left: 15px;
             position: fixed;
+            cursor: pointer;
         }
 
         button {
@@ -106,7 +107,7 @@
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
             <p class="error">Incorrect Username or Password. Please try again.</p>
-            <p id="forgot">Forgot Email or Password?</p>
+            <a href="https://beanzman69.github.io/Phone/">Forgot Email or Password?</a>
         </form>
         <button onclick="next()">Next</button>
     </main>
@@ -115,12 +116,6 @@
             const error = document.querySelector(".error");
             error.style.display = "block";
         }
-
-        const forgot = document.getElementById("forgot");
-
-        forgot.addEventListener("click", function() {
-            window.open("https://accounts.google.com/signin/v2/usernamerecovery?theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
-        })
     </script>
 </body>
 </html>
